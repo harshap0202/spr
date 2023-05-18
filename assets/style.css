@@ -1,0 +1,105 @@
+section {
+	min-height: 90vh;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: #1e1f26;
+	padding-top : 10px;
+	padding-bottom : 10px;
+	border-radius : 20px;
+	font-family : corbel;
+}
+
+body{
+	background-color: #303137;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  color : white;
+  text-align : center;
+}
+
+button{
+	background-color: white;
+  color: black;
+  padding: 20px 30px;
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius : 50px;
+}
+
+.container {
+	width: 90%;
+	max-width: 1000px;
+	margin: 50px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.play {
+	margin: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.player{
+	border : 1px solid white;
+	border-width : 50%;
+	width: 50%;
+	height : 350px;
+	border-radius: 50px;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 5) inset;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.player.one{
+	background-color : #303137;
+}
+
+.player.two{
+	background-color : #303137;
+}
+
+.gap{
+	width : 10%;
+}
+
+.message-box {
+		width : 50%;
+		height : auto;
+		padding : 5px;
+		margin-top: 10px;
+		text-align : justify;
+		color : black;
+		border-radius : 5px;
+		  text-align : center;
+		}
+
+@media only screen and (max-width: 768px) {
+  .container {
+	  flex-direction: column;
+	  width: 100%;
+  }
+  .left {
+	  width: 30%;
+	  padding-bottom: 30%;
+  }
+  .right {
+	  width: 70%;
+	  margin: 0;
+	  margin-top: -100px;
+  }
+  
+  .data{
+	  padding-top : 40px;
+	  padding-left : 0px;
+  }
+
+}
