@@ -1,136 +1,154 @@
 <html>
-	<head>
-		<meta name = "viewport" content = "width=device=width,initial-scale=1.0">
-		<title> Rock Paper Scissor </title>
-		<link rel = "stylesheet" href = "assets/style.css">
-	</head>
-	
-	<body>
-		<section>
-		
-		<div class = "name">
-		<h1 style="font-weight: bold;">Rock Paper Scissor</h1>
+
+<head>
+	<meta name="viewport" content="width=device=width,initial-scale=1.0">
+	<title> Rock Paper Scissor </title>
+	<link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+	<section>
+
+		<div class="title">
+			<h1 class="r">ROCK </h1>
+			<h1> | </h1>
+			<h1 class="p">PAPER</h1>
+			<h1> | </h1>
+			<h1 class="s">SCISSOR</h1>
+			<!-- <h1>Rock | Paper | Scissor</h1> -->
 		</div>
-		
-		<div class = "container">
-		
-			<div class = "player one">
-				<div class = "name" style="margin-right:70px;">
-					<h1>Player 1</h1>
+
+		<div class="container">
+
+			<div class="name">
+				<h1>Player 1</h1>
+				<div class="player">
+					<div class="message-box" id="p1">
+						<img id="loading-gif1" src="assets/images/right.gif" alt="Loading GIF 1" width="200px"
+							height="200px">
+						<img id="random-image1" src="" alt="Random Image 1" style="display: none;" width="200px"
+							height="200px">
+					</div>
 				</div>
-				<div class="message-box" id="p1" style="margin-right:70px;">
-					<img id="loading-gif1" src="assets/images/right.gif" alt="Loading GIF 1"  width = "200px" height = "200px">
-					<img id="random-image1" src="" alt="Random Image 1" style="display: none;" width = "200px" height = "200px">
+			</div>
+
+			<div class="play">
+				<button class="playeff" onclick="getRandomImage()">Play</button>
+			</div>
+
+			<div class="name">
+				<h1>Player 2</h1>
+				<div class="player">
+					<div class="message-box" id="p2">
+						<img id="loading-gif2" src="assets/images/left.gif" alt="Loading GIF 2" width="200px"
+							height="200px">
+						<img id="random-image2" src="" alt="Random Image 2" style="display: none;" width="200px"
+							height="200px">
+					</div>
 				</div>
 			</div>
-			
-			<div class = "play">
-			<button onclick="getRandomImage()">Play</button>
-			</div>
-			
-			<div class = "player two">
-		 	<div class = "name" style="margin-left:70px;">
-			<h1>Player 2</h1>
-			</div>
-			<div class="message-box" id="p2" style="margin-left:70px;">
-			<img id="loading-gif2" src="assets/images/left.gif" alt="Loading GIF 2"  width = "200px" height = "200px">
-			<img id="random-image2" src="" alt="Random Image 2" style="display: none;" width = "200px" height = "200px">
-			</div>
-			</div>
-			
-		</div>	
 
-			</section>
-		
-		<script>
-		 function getRandomImage() {
-            var gifElement1 = document.getElementById("loading-gif1");
-            var imgElement1 = document.getElementById("random-image1");
+		</div>
 
-            gifElement1.style.display = "block";
 
-            imgElement1.style.display = "none";
+		<div class="points">
+			<h1>Points</h1>
+			<h3>Player One : </h3>
+			<h3>Player Two : </h3>
+		</div>
 
-            setTimeout(function() {
-                var images = [
-                    "assets/images/r1.png",
+	</section>
+
+	<script>
+		function getRandomImage() {
+			var gifElement1 = document.getElementById("loading-gif1");
+			var imgElement1 = document.getElementById("random-image1");
+
+			gifElement1.style.display = "block";
+
+			imgElement1.style.display = "none";
+
+			setTimeout(function () {
+				var images = [
+					"assets/images/r1.png",
 					"assets/images/r2.png",
 					"assets/images/r3.png"
-                ];
-                
-                var randomIndex = Math.floor(Math.random() * images.length);
-                var randomImage = images[randomIndex];
+				];
 
-                gifElement1.style.display = "none";
-                
-                imgElement1.src = randomImage;
-                imgElement1.style.display = "block";
-            }, 2000);
-			
+				var randomIndex = Math.floor(Math.random() * images.length);
+				var randomImage = images[randomIndex];
+
+				gifElement1.style.display = "none";
+
+				imgElement1.src = randomImage;
+				imgElement1.style.display = "block";
+			}, 2000);
+
 			var gifElement2 = document.getElementById("loading-gif2");
-            var imgElement2 = document.getElementById("random-image2");
+			var imgElement2 = document.getElementById("random-image2");
 
-            gifElement2.style.display = "block";
+			gifElement2.style.display = "block";
 
-            imgElement2.style.display = "none";
+			imgElement2.style.display = "none";
 
-            setTimeout(function() {
-                var images = [
-                    "assets/images/l1.png",
+			setTimeout(function () {
+				var images = [
+					"assets/images/l1.png",
 					"assets/images/l2.png",
 					"assets/images/l3.png"
-                ];
-                
-                var randomIndex = Math.floor(Math.random() * images.length);
-                var randomImage = images[randomIndex];
+				];
 
-                gifElement2.style.display = "none";
-                
-                imgElement2.src = randomImage;
-                imgElement2.style.display = "block";
-		
-            }, 2000);
-			
+				var randomIndex = Math.floor(Math.random() * images.length);
+				var randomImage = images[randomIndex];
+
+				gifElement2.style.display = "none";
+
+				imgElement2.src = randomImage;
+				imgElement2.style.display = "block";
+
+			}, 2000);
+
 			function result() {
-			if (randomImage1 === "assets/images/r1.png" && randomImage2 === "assets/images/l1.png") {
-			alert("Tie!");
+				if (randomImage1 === "assets/images/r1.png" && randomImage2 === "assets/images/l1.png") {
+					alert("Tie!");
+				}
+
+				if (randomImage1 === "assets/images/r1.png" && randomImage2 === "assets/images/l2.png") {
+					alert("Player 2 wins!");
+				}
+
+				if (randomImage1 === "assets/images/r1.png" && randomImage2 === "assets/images/l3.png") {
+					alert("Player 1 wins!");
+				}
+
+				if (randomImage1 === "assets/images/r2.png" && randomImage2 === "assets/images/l1.png") {
+					alert("Player 1 wins!");
+				}
+
+				if (randomImage1 === "assets/images/r2.png" && randomImage2 === "assets/images/l2.png") {
+					alert("Tie!");
+				}
+
+				if (randomImage1 === "assets/images/r2.png" && randomImage2 === "assets/images/l3.png") {
+					alert("Player 2 wins!");
+				}
+
+				if (randomImage1 === "assets/images/r3.png" && randomImage2 === "assets/images/l1.png") {
+					alert("Player 2 wins!");
+				}
+
+				if (randomImage1 === "assets/images/r3.png" && randomImage2 === "assets/images/l2.png") {
+					alert("Player 1 wins!");
+				}
+
+				if (randomImage1 === "assets/images/r3.png" && randomImage2 === "assets/images/l3.png") {
+					alert("Tie!");
+				}
+
 			}
-			
-			if (randomImage1 === "assets/images/r1.png" && randomImage2 === "assets/images/l2.png") {
-			alert("Player 2 wins!");
-			}
-			
-			if (randomImage1 === "assets/images/r1.png" && randomImage2 === "assets/images/l3.png") {
-			alert("Player 1 wins!");
-			}
-			
-			if (randomImage1 === "assets/images/r2.png" && randomImage2 === "assets/images/l1.png") {
-			alert("Player 1 wins!");
-			}
-			
-			if (randomImage1 === "assets/images/r2.png" && randomImage2 === "assets/images/l2.png") {
-			alert("Tie!");
-			}
-			
-			if (randomImage1 === "assets/images/r2.png" && randomImage2 === "assets/images/l3.png") {
-			alert("Player 2 wins!");
-			}
-			
-			if (randomImage1 === "assets/images/r3.png" && randomImage2 === "assets/images/l1.png") {
-			alert("Player 2 wins!");
-			}
-			
-			if (randomImage1 === "assets/images/r3.png" && randomImage2 === "assets/images/l2.png") {
-			alert("Player 1 wins!");
-			}
-			
-			if (randomImage1 === "assets/images/r3.png" && randomImage2 === "assets/images/l3.png") {
-			alert("Tie!");
-			}
-		
-        }
-	}
-		</script>
-		
-	</body>
+		}
+	</script>
+
+</body>
+
 </html>

@@ -4,110 +4,192 @@ section {
 	align-items: center;
 	justify-content: center;
 	background-color: #f3f2ee;
-	padding-top : 10px;
-	padding-bottom : 10px;
-	border-radius : 20px;
-	font-family : corbel;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 20px;
+	font-family: corbel;
 }
 
-body{
+body {
 	background-color: #f3f2ee;
 }
 
-h1 {
-  font-size: 40px;
-  font-weight: lighter;
-  letter-spacing: 2px;
-  color : black;
-  text-align : center;
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s;
+	margin-left: 4%;
 }
 
-button{
-	background-color: white;
-  color: black;
-  padding: 20px 30px;
-  display: inline-block;
-  letter-spacing: 2px;
-  border-radius : 50px;
+.title h1 {
+	padding-left: 10px;
+	padding-right: 10px;
 }
+
+h1 {
+	transition: all 0.2s;
+}
+
+h1:hover {
+	font-weight: bold;
+}
+
+.r {
+	transition: all 0.2s;
+}
+
+.r:hover {
+	font-weight: bold;
+	color: #ba90c2;
+}
+
+.p {
+	transition: all 0.2s;
+}
+
+.p:hover {
+	font-weight: bold;
+	color: #6cb877;
+}
+
+.s {
+	transition: all 0.2s;
+}
+
+.s:hover {
+	font-weight: bold;
+	color: #89a9d8;
+}
+
+
+h1 {
+	font-size: 40px;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	color: black;
+	text-align: center;
+}
+
 
 .container {
-	width: 90%;
+	width: 100%;
 	max-width: 1000px;
-	margin: 50px auto;
-	display: flex;
+	margin: 20px auto;
+	margin-top: -2%;
+	display: grid;
+	grid-template-columns: auto auto auto;
 	align-items: center;
 	justify-content: center;
 }
 
 .play {
-	margin: 50px;
+	margin-top: 110px;
+	margin-left: 200px;
+	margin-right: 200px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 
-.player{
-	border : 5px solid white;
-	border-width : 50%;
-	width: 50%;
-	height : 350px;
+.playeff {
+	font-size: 150%;
+	border: 5px solid black;
+	background-color: white;
+	color: black;
+	padding: 20px 30px;
+	display: inline-block;
+	letter-spacing: 2px;
+	border-radius: 50px;
+	text-transform: uppercase;
+	transition: all 0.1s ease;
+}
+
+.playeff:hover {
+	border-radius: 20px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px inset;
+}
+
+.player {
+	border: 5px solid white;
+	border-width: 50%;
+	width: 300px;
+	height: 300px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #d8cdc3;
+	border-radius: 50%;
+}
+
+.player:hover {
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px;
+}
+
+
+.gap {
+	width: 10%;
+}
+
+.message-box {
+	width: 50%;
+	height: auto;
+	padding: 5px;
+	margin-top: 10px;
+	text-align: justify;
+	color: black;
+	border-radius: 5px;
+	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-.player.one{
-	background-color : #d8cdc3;
-	border-top-right-radius: 50%;
-	border-bottom-right-radius: 50%;
+.points {
+	margin-top: -5%;
+	border-width: 50%;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
-.player.two{
-	background-color : #d8cdc3;
-	border-top-left-radius: 50%;
-	border-bottom-left-radius: 50%;
+.points h3 {
+	margin-top: -1%;
 }
 
-.gap{
-	width : 10%;
-}
 
-.message-box {
-		width : 50%;
-		height : auto;
-		padding : 5px;
-		margin-top: 10px;
-		text-align : justify;
-		color : black;
-		border-radius : 5px;
-		  text-align : center;
-		}
 
-@media only screen and (max-width: 768px) {
-  .container {
-	  flex-direction: column;
-	  width: 100%;
-  }
-  .left {
-	  width: 30%;
-	  padding-bottom: 30%;
-  }
-  .right {
-	  width: 70%;
-	  margin: 0;
-	  margin-top: -100px;
-  }
-  
-  .data{
-	  padding-top : 40px;
-	  padding-left : 0px;
-  }
-  
-    img {
-	  width : 100px;
-	  height : 100px;
-  }
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.player {
+		width: 150px;
+		height: 150px;
+	}
+
+	.data {
+		padding-top: 40px;
+		padding-left: 0px;
+	}
+
+	img {
+		width: 100px;
+		height: 100px;
+	}
 
 }
