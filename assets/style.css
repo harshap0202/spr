@@ -11,7 +11,7 @@ section {
 }
 
 body {
-	background-color: #f3f2ee;
+	background-color: #3c3c3c;
 }
 
 .title {
@@ -128,7 +128,6 @@ h1 {
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 30px;
 }
 
-
 .gap {
 	width: 10%;
 }
@@ -162,9 +161,31 @@ h1 {
 	margin-top: -1%;
 }
 
+.winner-glow {
+    animation: wglow 1s ease-out;
+}
 
+.loser-glow {
+	animation: lglow 1s ease-out;
+}
 
+@keyframes wglow {
+    0% {
+        box-shadow: 0 0 10px 30px #00ff00; /* Green glow effect */
+    }
+    100% {
+        box-shadow: none;
+    }
+}
 
+@keyframes lglow {
+    0% {
+        box-shadow: 0 0 10px 30px #ff0000; /* Red glow effect */
+    }
+    100% {
+        box-shadow: none;
+    }
+}
 
 
 
